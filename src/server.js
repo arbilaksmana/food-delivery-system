@@ -6,6 +6,7 @@ const swaggerJsdoc = require('swagger-jsdoc');
 const swaggerUi = require('swagger-ui-express');
 const { connectDB } = require('./db');
 const restaurantsRouter = require('./routes/restaurants');
+const userRoutes = require('./routes/users.js')
 
 const app = express();
 
@@ -28,6 +29,7 @@ app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
 // routes
 app.use('/restaurants', restaurantsRouter);
+app.use('/users', userRoutes);
 
 const { PORT = 3002, MONGODB_URI } = process.env;
 
