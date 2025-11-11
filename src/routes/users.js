@@ -32,6 +32,9 @@ const {
  *               address:
  *                 type: string
  *                 example: "123 Main Street"
+ *               role:
+ *                 type: string
+ *                 example: "user"
  *     responses:
  *       201:
  *         description: Created
